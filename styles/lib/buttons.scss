@@ -1,0 +1,11 @@
+.btn {
+  border: 0;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 14px;
+  &__primary {
+    background: $naturalGoodGreen;
+    color: $white;
+    font-weight: bold;
+  }
+}
