@@ -9,10 +9,13 @@ class App extends Component {
     this.setGeneralNumbers = this.setGeneralNumbers.bind(this);
     this.setPageViewNumbers = this.setPageViewNumbers.bind(this);
     this.state = {data: []}
+    
+  }
+
+  componentDidMount(){
     this.loadData('widgets', this.setGeneralNumbers)
     this.loadData('pageViews', this.setPageViewNumbers)
   }
-
   setGeneralNumbers(data) {
     this.setState({data:data})
   }
