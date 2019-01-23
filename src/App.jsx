@@ -6,29 +6,19 @@ import Chart from './Chart.jsx';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.setGeneralNumbers = this.setGeneralNumbers.bind(this);
-    this.setPageViewNumbers = this.setPageViewNumbers.bind(this);
-    this.state = {data: []}
-    
+    this.state = {data: []}    
   }
 
   componentDidMount(){
     this.loadData('widgets', this.setGeneralNumbers)
-    this.loadData('pageViews', this.setPageViewNumbers)
+    
   }
-  setGeneralNumbers(data) {
-    this.setState({data:data})
-  }
-
-  setPageViewNumbers(data) {
-    this.setState({pageViews:data})
-  }
-
+  
   loadData(which, handler) {
-		fetch('http://dev.4all.com:3050/'+which)
+		fetch('http://dev.4all.com:3050/widgets')
 			.then(response => response.json())
 			.then(data => {
-        handler(data)        
+        this.setState({data:data})
 		})
 			.catch(err => console.error(this.props.url, err.toString()))
   }
@@ -39,7 +29,7 @@ class App extends Component {
       <div className="app">
         <PageTitle pageTitle = {pageTitle}/>
         <NavBar siteData={this.state.data} />
-        <Chart pageViews = {this.state.pageViews} />
+        <Chart />
       </div>
     );
   }
