@@ -1,0 +1,61 @@
+.nav {
+  margin-top: ($gutter / 2);
+  margin-bottom: ($gutter / 2);
+  &__element {
+    display: flex;
+    
+    > div {
+      padding-top: $gutter;
+      padding-bottom: $gutter;
+    }
+
+    &__icon {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      color: $white;
+      font-size: 45px;
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+      
+
+      &--green {
+        background-color: $buttonGreen;
+      }
+
+      &--yellow {
+        background-color: $buttonYellow;
+      }
+
+      &--blue {
+        background-color: $buttonBlue;
+      }
+
+      &--red {
+        background-color: $buttonRed;
+      }
+    }
+
+    &__info{
+      background: $white;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      &__number {
+        font-size: 18px;
+        color: $textColor;
+      }
+      &__name {
+        font-size: 12px;
+        color: $mediumDarkGray;
+        margin-top: -#{$gutter} //parsing the varibale to make it negative
+      }
+      > span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "name": "react-simple-boilerplate",
+  "name": "4-all-demonstration-project",
   "version": "1.0.0",
-  "description": "Simple and lightweight Boilerplate for ReactJS projects",
+  "description": "4 all Demonstration Project",
   "scripts": {
     "lint": "eslint src",
     "start": "node server.js"
@@ -32,6 +32,7 @@
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "node-sass": "^4.5.2",
+    "react-canvas-js": "^1.0.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
@@ -39,7 +40,10 @@
   },
   "dependencies": {
     "babel-loader": "^7.0.0",
+    "chart.js": "^2.7.3",
     "react": "^15.5.4",
+    "react-canvas-js": "^1.0.0",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^15.5.4"
   },
   "main": "server.js"

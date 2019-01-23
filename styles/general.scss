@@ -1,0 +1,12 @@
+body {
+  background: $bodyBackground;
+  padding:$gutter;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: $h1;
+  font-size: 24px;
+  margin-top: ($gutter / 2);
+  margin-bottom: ($gutter / 2);
+}

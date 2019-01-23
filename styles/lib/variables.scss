@@ -1,14 +1,44 @@
 //Defining colors
   //Blues
-$brightBlue: #3677de;
+$brightBlue       : #479bff;
+$buttonBlue       : #30a5ff;
+
+  //Yellows
+$buttonYellow     : #ffb53e;
+
+  //Reds
+$buttonRed        : #f9243f;
+
   //Greens
 $naturalGoodGreen : #68e900;
-  //WhiteAndBlack
-$white: #FFFFFF;
-$black: #000000;
+$buttonGreen      : #1ebfae;
 
+  //WhiteAndBlack
+$white            : #FFFFFF;
+$black            : #000000;
+
+  //grays
+$lightGray        : #f0f3f7;
+$mediumLightGray  : #e3e3eb;
+$mediumDarkGray   : #909399;
+$darkGray         : #555f79;
 
 
 
 // Attatching elements to Color
-$titleColor: $brightBlue;
+$blueBubble       : $brightBlue;
+$grayBubble       : $mediumLightGray;
+$bodyBackground   : $mediumLightGray;
+$hintColor        : $mediumLightGray;
+$textColor        : $darkGray;
+$h1               : $darkGray;
+
+
+//Sizing
+$mobile           : 320px;
+$tablet-width     : 768px;
+$desktop-width    : 1024px;
+$large-width      : 1366px;
+
+$gutter           : 10px;
+$borderRadius     : 5px;
