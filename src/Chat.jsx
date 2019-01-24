@@ -6,14 +6,7 @@ class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      messages: {
-        0 : {
-          username : "Roger Doe",
-          message: "un dos tres",
-          portrait: "http://dev.4all.com:3050/imgs/profile2.png",
-          
-        }
-      }
+      messages : []
     }
   }  
   componentDidMount() {
@@ -26,18 +19,33 @@ class Chart extends Component {
 		fetch('http://dev.4all.com:3050/messages')
 			.then(response => response.json())
 			.then(data => {
-        console.log(data);
+        __this.setState({messages : data})
+        console.log(__this.state.messages)
 		})
 			.catch(err => console.error(this.props.url, err.toString()))
   }
 
   render(){ 
+    console.log(this.state.messages);
+
     return(
-      <div className="chatWarpper row">
-        <div className="header-block col-sm-8"> 
+      <div className="chatWarpper">
+        <div className="header-block "> 
           <h2> Chat </h2>
         </div>
-        <div className="chat col-sm-8">
+        <div className="chat">
+          <ul>
+            { this.state.messages.map((item, i) => {
+              var cls ="chat__message"
+              cls += item.displayPortraitLeft ==  true ? " --left" : " --right";
+              return <li className={cls}>
+                <img src={item.portrait} />
+                <span>{item.userName}</span>
+                <span>{item.time}</span>
+              </li>
+              })
+            } 
+          </ul>
         </div>
       </div>
     )
