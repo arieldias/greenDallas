@@ -55,10 +55,15 @@ class Chart extends Component {
 
   render(){ 
     return(
-      <div className="chart">
-        <Line 
-          data = {this.state.pageViews}          
-        />    
+      <div className="char-wrapper">
+        <div className="header-block"> 
+            <h2> Site Traffic Overview </h2>
+        </div>
+        <div className="chart">
+          <Line 
+            data = {this.state.pageViews}          
+          />    
+        </div>
       </div>
     )
   }  

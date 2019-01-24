@@ -6,14 +6,13 @@ class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      pageViews: {
-        labels : [],
-        datasets : [
-          {
-            label: "pageviews", 
-            data : []
-          }
-        ]
+      messages: {
+        0 : {
+          username : "Roger Doe",
+          message: "un dos tres",
+          portrait: "http://dev.4all.com:3050/imgs/profile2.png",
+          
+        }
       }
     }
   }  
@@ -21,42 +20,25 @@ class Chart extends Component {
     this.loadData()
   }
 
-  normalizePageViews (data) {
-    let months =[];
-    let pageviews = []
 
-    for (var i = 0; i < data.length; i++ ) {
-      months.push(data[i].month);
-      pageviews.push(data[i].views);
-    }
-
-    this.setState({
-      pageViews :{
-        labels : months,
-        datasets : [
-          {
-            label: "pageviews",
-            data : pageviews
-          }
-        ]
-      }
-    })
-  }
-  
   loadData() {
     var __this = this;
-		fetch('http://dev.4all.com:3050/pageViews')
+		fetch('http://dev.4all.com:3050/messages')
 			.then(response => response.json())
 			.then(data => {
-        __this.normalizePageViews(data);       
+        console.log(data);
 		})
 			.catch(err => console.error(this.props.url, err.toString()))
   }
 
   render(){ 
     return(
-      <div className="chat">
-         
+      <div className="chatWarpper row">
+        <div className="header-block col-sm-8"> 
+          <h2> Chat </h2>
+        </div>
+        <div className="chat col-sm-8">
+        </div>
       </div>
     )
   }  

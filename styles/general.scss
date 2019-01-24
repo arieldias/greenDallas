@@ -10,3 +10,22 @@ h1 {
   margin-top: ($gutter / 2);
   margin-bottom: ($gutter / 2);
 }
+
+h2 {
+  color: $h1;
+  font-size: 18px;
+  margin-top: ($gutter / 2);
+  margin-bottom: ($gutter / 2);
+}
+
+
+.header-block {
+  display: block;
+  width: 100%;
+  padding: $gutter;
+  margin-top: ( $gutter * 2 );
+  border-bottom: 1px solid $bodyBackground;
+  border-top-left-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+  background: $white;
+}
