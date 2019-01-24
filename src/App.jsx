@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PageTitle from './PageTitle.jsx';
 import NavBar from './NavBar.jsx';
 import Chart from './Chart.jsx';
+import Chat from './Chat.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class App extends Component {
     
   }
   
-  loadData(which, handler) {
+  loadData(which) {
 		fetch('http://dev.4all.com:3050/widgets')
 			.then(response => response.json())
 			.then(data => {
@@ -30,6 +31,7 @@ class App extends Component {
         <PageTitle pageTitle = {pageTitle}/>
         <NavBar siteData={this.state.data} />
         <Chart />
+        <Chat />
       </div>
     );
   }

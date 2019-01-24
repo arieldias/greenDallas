@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import JSONHandler from './jsonHandler.jsx';
+
 class NavBar extends Component {     
 
   render(){ 
@@ -10,7 +10,7 @@ class NavBar extends Component {
 
   
 
-        return (
+    return (
       <div className="nav row">
         <div className="nav__element col-sm-3" > 
           <div className="nav__element__icon col-sm-4 nav__element__icon--blue">
@@ -33,7 +33,7 @@ class NavBar extends Component {
         </div>
 
         <div className="nav__element col-sm-3"> 
-          <div className="nav__element__icon col-sm-4 nav__element__icon--red">
+          <div className="nav__element__icon col-sm-4 nav__element__icon--green">
             <i className="far fa-user"></i>
           </div>
           <div className="nav__element__info col-sm-8">
@@ -43,7 +43,7 @@ class NavBar extends Component {
         </div>
 
         <div className="nav__element col-sm-3"> 
-          <div className="nav__element__icon col-sm-4  nav__element__icon--green">
+          <div className="nav__element__icon col-sm-4  nav__element__icon--red">
             <i className="far fa-newspaper"></i>
           </div>
           <div className="nav__element__info col-sm-8">

@@ -55,10 +55,8 @@ class Chart extends Component {
 
   render(){ 
     return(
-      <div className="chart">
-        <Line 
-          data = {this.state.pageViews}          
-        />    
+      <div className="chat">
+         
       </div>
     )
   }  
