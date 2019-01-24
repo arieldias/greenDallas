@@ -57,13 +57,14 @@ class Chart extends Component {
     return(
       <div className="char-wrapper">
         <div className="header-block"> 
+            <i className="fas fa-project-diagram"></i>
             <h2> Site Traffic Overview </h2>
         </div>
         <div className="chart">
           <Line 
             data = {this.state.pageViews}          
           />    
-        </div>
+        </div>        
       </div>
     )
   }  

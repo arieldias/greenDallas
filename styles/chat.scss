@@ -1,0 +1,49 @@
+.chat {
+    background: $white;
+    padding: $gutter;    
+    height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &__wrapper {
+      width: 75%;      
+    }
+    &__element {
+      &:not(:last-child) {
+        border-bottom: 1px solid $bodyBackground;
+      }
+      padding: $gutter 0;      
+      display: flex;
+      align-items: center;
+      &__image {
+        img {
+          max-width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      &__info {
+        color: $black;
+        &__meta {
+          &__userName {
+            font-size:15px;
+            font-weight: bold;
+          }
+
+          &__time {
+            font-size: 13px;
+            color: $mediumDarkGray
+          }
+        }
+        &__message {
+          padding: ($gutter / 2) 0;
+        }
+      }
+    }
+    &__newMessage {
+      border-top: 1px solid $bodyBackground;
+      background: $white;
+      border-bottom-left-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      padding: $gutter;
+    }
+}
