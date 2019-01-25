@@ -11,7 +11,9 @@ class Chart extends Component {
         datasets : [
           {
             label: "pageviews", 
-            data : []
+            data : [],
+            backgroundColor: "rgba(55,163,220,0.4)",
+            borderColor : "rgba(55,163,220,0.6)"
           }
         ]
       }
