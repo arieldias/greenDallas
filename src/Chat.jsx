@@ -145,9 +145,9 @@ class Chart extends Component {
           </ul>
         </div>
         <div className="chat__newMessage">
-          <form method="#" onSubmit={this.handleSubmit} className="chat__newMessage__form">
+          <form method="#"  className="chat__newMessage__form">
            <input type="text" placeholder="Type your message here" className="inputText" onChange={this.handleChange} value={this.state.newMessage}/>
-           <input type="submit" value="Send" className="btn btn--green --noLeftRadius"/>
+           <a  onClick={this.handleSubmit} className="btn btn--green --noLeftRadius hoverBounceRight">Send </a>
           </form>
         </div>
       </div>

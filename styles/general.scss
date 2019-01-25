@@ -28,12 +28,6 @@ h2 {
   &--green {
     background: $submitGreen;
     color: $white;
-    &:visited,
-    &:active,
-    &:hover {
-      color: $white;
-      background: darken($submitGreen, 5%);
-    }
   }
 }
 
@@ -54,7 +48,6 @@ h2 {
 }
 
 
-
 .header-block {
   display: flex;
   align-items: center;
@@ -68,4 +61,11 @@ h2 {
   i {
     margin-right: $gutter;
   }
+}
+
+
+//EFECTS
+
+.hoverBounceRight {
+  @include bounceToRight();
 }
