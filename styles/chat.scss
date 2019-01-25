@@ -64,5 +64,15 @@
       .inputText {
         flex: 1;        
       }
+
+      &--msgError {
+        .error {
+          display: block;
+        }
+        .inputText {
+          border-color: $buttonRed;
+        }
+      }
+      
     }    
 }

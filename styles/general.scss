@@ -23,12 +23,23 @@ h2 {
   font-weight: bold;
   border-radius: ( $borderRadius/2 );
   padding: $gutter;
+  &:before {
+    border-radius: ( $borderRadius/2 );
+  }
   
   
   &--green {
     background: $submitGreen;
     color: $white;
   }
+}
+
+.error {
+  font-size: 12px;
+  padding-top: ( $gutter * 2);
+  padding-bottom: $gutter;
+  color: $buttonRed;
+  display: none;
 }
 
 .inputText {

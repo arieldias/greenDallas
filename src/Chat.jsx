@@ -8,7 +8,8 @@ class Chart extends Component {
     super(props);
     this.state = { 
       messages : [],
-      newMessage : ""
+      newMessage : "",
+      chatMessageClass : "chat__newMessage"
     }
 
     this.loadData     = this.loadData.bind(this);
@@ -89,6 +90,7 @@ class Chart extends Component {
 
   handleChange(event) {
     this.setState ({newMessage : event.target.value });   
+    this.setState ({chatMessageClass : "chat__newMessage"})
   }
 
   handleSubmit (event){
@@ -101,28 +103,34 @@ class Chart extends Component {
     updatedMessages[updatedMessages.length] = newEntry;
 
    this.setState({messages : updatedMessages});
+   this.setState({newMessage : ""})
   }
 
   sendMessage() {
-    var newEntry = {
-      userName: 'Eu',
-      time: '1 min ago',
-      message: this.state.newMessage,
-      portrait: null,
-      displayPortraitLeft: true
-    }
+    
+    if (this.state.newMessage != "") {
+      var newEntry = {
+        userName: 'Eu',
+        time: '1 min ago',
+        message: this.state.newMessage,
+        portrait: null,
+        displayPortraitLeft: true
+      }
 
-    fetch('http://dev.4all.com:3050/messages', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newEntry)
-    }).then(res => {
-      console.log(res);
-      this.addMessage(newEntry);
-    })
+      fetch('http://dev.4all.com:3050/messages', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newEntry)
+      }).then(res => {
+        console.log(res);
+        this.addMessage(newEntry);
+      })
+    } else {
+      this.setState({chatMessageClass: "chat__newMessage chat__newMessage--msgError"})
+    }
   }
 
   render(){ 
@@ -144,11 +152,12 @@ class Chart extends Component {
             } 
           </ul>
         </div>
-        <div className="chat__newMessage">
+        <div className={this.state.chatMessageClass}>
           <form method="#"  className="chat__newMessage__form">
            <input type="text" placeholder="Type your message here" className="inputText" onChange={this.handleChange} value={this.state.newMessage}/>
            <a  onClick={this.handleSubmit} className="btn btn--green --noLeftRadius hoverBounceRight">Send </a>
           </form>
+          <p className="error">The entry cannot be empty</p>
         </div>
       </div>
     )
