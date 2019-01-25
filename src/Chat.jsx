@@ -49,11 +49,11 @@ class Chart extends Component {
     if (item.displayPortraitLeft) {
       return (
         <li className="chat__element row">
-          <div className="chat__element__image col-sm-2">
+          <div className="chat__element__image col-xs-4 col-sm-2">
             {this.renderImage(item.portrait) }
             
           </div>
-          <div className="chat__element__info col-sm-10">
+          <div className="chat__element__info col-xs-8 col-sm-10">
               <div className="chat__element__info__meta">
                   <span className="chat__element__info__meta__userName"> {item.userName} </span>
                   <span className="chat__element__info__meta__time"> {item.time} </span>
@@ -69,7 +69,7 @@ class Chart extends Component {
     } else {
       return (
         <li className="chat__element row">
-          <div className="chat__element__info col-sm-10">
+          <div className="chat__element__info col-sm-10 col-xs-8">
               <div className="chat__element__info__meta">
                   <span className="chat__element__info__meta__userName"> {item.userName} </span>
                   <span className="chat__element__info__meta__time"> {item.time} </span>
@@ -79,7 +79,7 @@ class Chart extends Component {
                  {item.message}
               </div>
           </div>
-          <div className="chat__element__image col-sm-2">
+          <div className="chat__element__image col-sm-2 col-xs-4">
              <img src={item.portrait} />
           </div>
           

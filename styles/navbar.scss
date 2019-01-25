@@ -1,7 +1,9 @@
 .nav {
   &__element {
-    display: flex;
     margin: $gutter 0;
+    @include tablet {
+      display: flex;
+    }
     
     > div {
       padding-top: ( $gutter * 2 );
@@ -42,6 +44,9 @@
       flex-wrap: wrap;
       border-top-right-radius: $borderRadius;
       border-bottom-right-radius: $borderRadius;
+      @include mobile {
+        text-align: center;
+      }
       &__number {
         font-size: 18px;
         color: $textColor;
@@ -49,7 +54,9 @@
       &__name {
         font-size: 12px;
         color: $mediumDarkGray;
-        margin-top: -#{$gutter} //parsing the varibale to make it negative
+        @include tablet {
+          margin-top: -#{$gutter}; //parsing the varibale to make it negative
+        }
       }
       > span {
         display: block;
