@@ -6,6 +6,7 @@ $buttonBlue       : #30a5ff;
   //Yellows
 $buttonYellow     : #ffb53e;
 
+  
   //Reds
 $buttonRed        : #f9243f;
 
@@ -20,7 +21,8 @@ $black            : #000000;
 
   //grays
 $lightGray        : #f0f3f7;
-$mediumLightGray  : #e3e3eb;
+$mediumLightGray  : #f1f4f7;
+$mediumGray       : #e3e3eb;
 $mediumDarkGray   : #909399;
 $darkGray         : #555f79;
 
@@ -28,12 +30,13 @@ $darkGray         : #555f79;
 
 // Attatching elements to Color
 $blueBubble       : $brightBlue;
-$grayBubble       : $mediumLightGray;
+$grayBubble       : $mediumGray;
 $bodyBackground   : $mediumLightGray;
-$hintColor        : $mediumLightGray;
+$hintColor        : $mediumGray;
 $textColor        : $darkGray;
 $h1               : $darkGray;
-
+$h2               : darken($darkGray,3%);
+$noPortraitColor  : $buttonYellow;
 
 //Sizing
 $mobile           : 320px;

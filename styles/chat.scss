@@ -5,7 +5,9 @@
     overflow-y: auto;
     overflow-x: hidden;
     &__wrapper {
-      width: 75%;      
+      @include desktop {
+        width: 65%;      
+      }
     }
     &__element {
       &:not(:last-child) {
@@ -15,9 +17,19 @@
       display: flex;
       align-items: center;
       &__image {
+        max-width: 117px;
         img {
           max-width: 100%;
           border-radius: 50%;
+        }
+        
+        &__noPortrait {
+          margin: 0 15px;
+          width: 87px;
+          height: 87px;
+          max-width: 100%;
+          border-radius: 50%;
+          background: $noPortraitColor;
         }
       }
 

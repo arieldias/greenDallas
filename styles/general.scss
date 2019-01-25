@@ -1,18 +1,18 @@
 body {
   background: $bodyBackground;
-  padding:$gutter;
+  padding:$gutter*2;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   color: $h1;
-  font-size: 24px;
-  margin-top: ($gutter / 2);
-  margin-bottom: ($gutter / 2);
+  font-size: 28px;
+  margin-top: ($gutter * 2);
+  margin-bottom: ($gutter * 2);
 }
 
 h2 {
-  color: $h1;
+  color: $h2;
   font-size: 18px;
   margin-top: ($gutter / 2);
   margin-bottom: ($gutter / 2);
@@ -58,7 +58,6 @@ h2 {
 .header-block {
   display: flex;
   align-items: center;
-  color: $textColor;
   width: 100%;
   padding: $gutter;
   margin-top: ( $gutter * 2 );
