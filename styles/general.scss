@@ -2,17 +2,6 @@ body {
   background: $bodyBackground;
   padding:$gutter;
   font-family: Arial, Helvetica, sans-serif;
-  * {
-    &--noRightRadius {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    &--noLeftRadius {
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-    }
-  }
 }
 
 h1 {
@@ -33,18 +22,37 @@ h2 {
   border: 0;
   font-weight: bold;
   border-radius: ( $borderRadius/2 );
-  padding: ($gutter/2)
+  padding: $gutter;
+  
+  
   &--green {
     background: $submitGreen;
     color: $white;
+    &:visited,
+    &:active,
+    &:hover {
+      color: $white;
+      background: darken($submitGreen, 5%);
+    }
   }
 }
 
-.input {
+.inputText {
   border:1px solid $bodyBackground;
-  border-radius: ( $borderRadius/2 );
-  padding: ($gutter/2)
+  border-top-left-radius: ( $borderRadius/2 );
+  border-bottom-left-radius: ( $borderRadius/2 );
+  padding: $gutter;
+  font-size: 14px;
+  line-height: 14px;
+
+  & + .btn  {
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
+
 
 
 .header-block {

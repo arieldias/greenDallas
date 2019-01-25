@@ -52,7 +52,7 @@ class Chart extends Component {
 		})
 			.catch(err => console.error(this.props.url, err.toString()))
   }
-
+ 
   render(){ 
     return(
       <div className="char-wrapper">

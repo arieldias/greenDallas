@@ -45,5 +45,12 @@
       border-bottom-left-radius: $borderRadius;
       border-bottom-right-radius: $borderRadius;
       padding: $gutter;
-    }
+      &__form {
+        display: flex;
+        align-items: strech;      
+      }
+      .inputText {
+        flex: 1;
+      }
+    }    
 }

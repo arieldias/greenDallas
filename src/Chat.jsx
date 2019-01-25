@@ -6,8 +6,15 @@ class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      messages : []
+      messages : [],
+      newMessage : ""
     }
+
+    this.loadData     = this.loadData.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.sendMessage  = this.sendMessage.bind(this);
+    this.addMessage   = this.addMessage.bind(this);
     
   }  
   componentDidMount() {
@@ -16,14 +23,12 @@ class Chart extends Component {
 
 
   loadData() {
-    var __this = this;
-		fetch('http://dev.4all.com:3050/messages')
+    fetch('http://dev.4all.com:3050/messages')
 			.then(response => response.json())
 			.then(data => {
-        __this.setState({messages : data})
-        
+        this.setState({ messages : data });        
 		})
-			.catch(err => console.error(this.props.url, err.toString()))
+			.catch(err => console.error(this.props.url, err.toString()));
   }
 
   getStructuredMessage (item) {
@@ -68,8 +73,53 @@ class Chart extends Component {
     }    
   }
 
+  handleChange(event) {
+    this.setState ({newMessage : event.target.value });   
+  }
+
+  handleSubmit (event){
+    event.preventDefault();
+    this.sendMessage();  
+  }
+
+  addMessage () {
+    var newEntry = {
+      userName: "Eu",
+      portrait: "",
+      displayPortraitLeft: true,
+      time: "1 minute ago",
+      message : this.state.newMessage
+    }
+   
+    var updatedMessages = this.state.messages;
+    updatedMessages[updatedMessages.length] = newEntry;
+
+   this.setState({messages : updatedMessages});
+   
+   
+  }
+
+  sendMessage() {
+    fetch('http://dev.4all.com:3050/messages', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userName: 'Eu',
+        time: '1 min ago',
+        message: this.state.newMessage,
+        portrait: null,
+        displayPortraitLeft: true
+      })
+    }).then(res => {
+      console.log(res);
+      this.addMessage();
+    })
+  }
+
   render(){ 
-    console.log(this.state.messages);
     var __this = this;
     return(      
       <div className="chat__wrapper">
@@ -90,8 +140,10 @@ class Chart extends Component {
           </ul>
         </div>
         <div className="chat__newMessage">
-           <input type="text" placeholder="Type your message here" className="input --noRightRadius"/>
+          <form method="#" onSubmit={this.handleSubmit} className="chat__newMessage__form">
+           <input type="text" placeholder="Type your message here" className="inputText" onChange={this.handleChange} value={this.state.newMessage}/>
            <input type="submit" value="Send" className="btn btn--green --noLeftRadius"/>
+          </form>
         </div>
       </div>
     )
