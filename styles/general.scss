@@ -11,7 +11,7 @@ h1 {
   margin-bottom: ($gutter * 2);
 }
 
-h2 {
+.h2 {
   color: $h2;
   font-size: 18px;
   margin-top: ($gutter / 2);
@@ -59,11 +59,13 @@ h2 {
 }
 
 
-.header-block {
+.headerBlock {
   display: flex;
   align-items: center;
   width: 100%;
   padding: $gutter;
+  color: $h2;
+  font-size: 18px;
   margin-top: ( $gutter * 2 );
   border-bottom: 1px solid $bodyBackground;
   border-top-left-radius: $borderRadius;
@@ -76,7 +78,8 @@ h2 {
 
 
 //EFECTS
-
 .hoverBounceRight {
   @include bounceToRight();
 }
+
+

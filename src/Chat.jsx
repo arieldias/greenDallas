@@ -134,26 +134,25 @@ class Chart extends Component {
   }
 
   render(){ 
-    var __this = this;
+    
     return(      
       <div className="chat__wrapper">
-        <div className="header-block "> 
+        <div className="headerBlock "> 
           <i className="far fa-comments"></i>
-          <h2> Chat </h2>
+          <h2 className="h2"> Chat </h2>
         </div>
         <div className="chat">
           <ul>
-            { this.state.messages.map((item, i) => {
-              
+            { this.state.messages.map((item, i) => {              
                 return (
-                  __this.getStructuredMessage(item)
+                  this.getStructuredMessage(item)
                 )          
               })
             } 
           </ul>
         </div>
         <div className={this.state.chatMessageClass}>
-          <form method="#"  className="chat__newMessage__form">
+          <form method="#"  className="chat__newMessage__form" onSubmit={this.handleSubmit}>
            <input type="text" placeholder="Type your message here" className="inputText" onChange={this.handleChange} value={this.state.newMessage}/>
            <a  onClick={this.handleSubmit} className="btn btn--green --noLeftRadius hoverBounceRight">Send </a>
           </form>

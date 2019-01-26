@@ -12,8 +12,8 @@ class NavBar extends Component {
 
     return (
       <div className="nav row">
-        <div className="nav__element col-xs-12 col-md-6 col-lg-3" > 
-          <div className="nav__element__icon col-xs-12 col-sm-4 nav__element__icon--blue">
+        <div className="nav__element nav__element--blue col-xs-12 col-md-6 col-lg-3" > 
+          <div className="nav__element__icon col-xs-12 col-sm-4">
             <i className="fas fa-shopping-bag "></i>
           </div>
           <div className="nav__element__info col-xs-12 col-sm-8">
@@ -22,8 +22,8 @@ class NavBar extends Component {
           </div>
         </div>
 
-        <div className="nav__element col-xs-12 col-md-6 col-lg-3"> 
-          <div className="nav__element__icon col-xs-12 col-sm-4 nav__element__icon--yellow">
+        <div className="nav__element nav__element--yellow col-xs-12 col-md-6 col-lg-3"> 
+          <div className="nav__element__icon col-xs-12 col-sm-4">
             <i className="far fa-comment"></i>
           </div>
           <div className="nav__element__info col-xs-12 col-sm-8">
@@ -32,8 +32,8 @@ class NavBar extends Component {
           </div>
         </div>
 
-        <div className="nav__element col-xs-12 col-md-6 col-lg-3"> 
-          <div className="nav__element__icon col-xs-12 col-sm-4 nav__element__icon--green">
+        <div className="nav__element nav__element--green col-xs-12 col-md-6 col-lg-3"> 
+          <div className="nav__element__icon col-xs-12 col-sm-4">
             <i className="far fa-user"></i>
           </div>
           <div className="nav__element__info col-xs-12 col-sm-8">
@@ -42,8 +42,8 @@ class NavBar extends Component {
           </div>
         </div>
 
-        <div className="nav__element col-xs-12 col-md-6 col-lg-3"> 
-          <div className="nav__element__icon col-xs-12 col-sm-4  nav__element__icon--red">
+        <div className="nav__element nav__element--red col-xs-12 col-md-6 col-lg-3"> 
+          <div className="nav__element__icon col-xs-12 col-sm-4">
             <i className="far fa-newspaper"></i>
           </div>
           <div className="nav__element__info col-xs-12 col-sm-8">

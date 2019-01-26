@@ -18,6 +18,8 @@ class Chart extends Component {
         ]
       }
     }
+
+    this.normalizePageViews = this.normalizePageViews.bind(this);
   }  
   componentDidMount() {
     this.loadData()
@@ -46,21 +48,20 @@ class Chart extends Component {
   }
   
   loadData() {
-    var __this = this;
-		fetch('http://dev.4all.com:3050/pageViews')
+   	fetch('http://dev.4all.com:3050/pageViews')
 			.then(response => response.json())
 			.then(data => {
-        __this.normalizePageViews(data);       
+        this.normalizePageViews(data);       
 		})
 			.catch(err => console.error(this.props.url, err.toString()))
   }
  
   render(){ 
     return(
-      <div className="char-wrapper">
-        <div className="header-block"> 
+      <div className="charWrapper">
+        <div className="headerBlock"> 
             <i className="fas fa-project-diagram"></i>
-            <h2> Site Traffic Overview </h2>
+            <h2 className="h2"> Site Traffic Overview </h2>
         </div>
         <div className="chart">
           <Line 

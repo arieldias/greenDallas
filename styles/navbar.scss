@@ -10,31 +10,31 @@
       padding-bottom: ( $gutter * 2);
     }
 
+    &--green {
+      @include highLightIcon("nav__element",$buttonGreen);
+    }
+
+    &--yellow {
+      @include highLightIcon("nav__element",$buttonYellow);
+    }
+
+    &--blue {
+      @include highLightIcon("nav__element",$buttonBlue);
+    }
+
+    &--red {
+      @include highLightIcon("nav__element",$buttonRed);
+    }
+
     &__icon {
       align-items: center;
       display: flex;
+      text-align: center;
       justify-content: center;
       color: $white;
       font-size: 45px;
       border-top-left-radius: $borderRadius;
       border-bottom-left-radius: $borderRadius;
-      
-
-      &--green {
-        background-color: $buttonGreen;
-      }
-
-      &--yellow {
-        background-color: $buttonYellow;
-      }
-
-      &--blue {
-        background-color: $buttonBlue;
-      }
-
-      &--red {
-        background-color: $buttonRed;
-      }
     }
 
     &__info{
