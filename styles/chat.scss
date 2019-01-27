@@ -17,7 +17,8 @@
       display: flex;
       align-items: center;
       &__image {
-        max-width: 117px;
+        //max width should take in consideration the padding around it;
+        max-width: $imageChatSize + 30px;
         img {
           max-width: 100%;
           border-radius: 50%;
@@ -25,8 +26,8 @@
         
         &__noPortrait {
           margin: 0 15px;
-          width: 87px;
-          height: 87px;
+          // since this is a background, it should ignore the padding around it
+          padding: ($imageChatSize / 2); 
           max-width: 100%;
           border-radius: 50%;
           background: $noPortraitColor;

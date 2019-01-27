@@ -35,6 +35,10 @@
       font-size: 45px;
       border-top-left-radius: $borderRadius;
       border-bottom-left-radius: $borderRadius;
+      @include mobile {
+        border-top-right-radius: $borderRadius;
+        border-bottom-left-radius: 0;
+      }
     }
 
     &__info{
@@ -46,6 +50,8 @@
       border-bottom-right-radius: $borderRadius;
       @include mobile {
         text-align: center;
+        border-top-right-radius:0;
+        border-bottom-left-radius: $borderRadius;
       }
       &__number {
         font-size: 18px;

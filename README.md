@@ -1,41 +1,42 @@
-React Boilerplate
+4 All Front End Test
 =====================
 
-A minimal and light dev environment for ReactJS.
+Teste de desenvolvimento para vaga de Desenvolvedor Front End.
 
-### Usage
+### BoilerPlate e Referencias
 
-Clone the boilerplate and create your own git repo.
+Procurei usar o boilerPlate mais leve possível, tento em vista que os exercícios propostos não requeriam bibliotecas muito complexas.
+
+React-simple-boilerplate
 
 ```
 git clone git@github.com:nolotz/react-simple-boilerplate.git
 ```
 
-Install the dependencies and start the server.
+Tods os icones vieram do font-awesome
+Biblioteca de chart react-chartjs-2
+
+### Instalação e inicialização
+
+Instarlar dependências e iniciar server
 
 ```
 npm/yarn install
 npm/yarn start
-open http://localhost:3000
+abra http://localhost:3000
 ```
 
-### Static Files
+### Convenções adotadas
+* Idioma padrão: inglês
+* Convenção de nomeação HTML e CSS: BEM with camelCase
+  * a regra de uso em camelCase foi ignorada para chamar classes de icones do Font Awesome.
 
-You can store static files like images, fonts, etc in the `build` folder.
 
-For example, if you copy a file called my_image.png into the build folder you can access it using `http://localhost:3000/build/my_image.png`.
-
-### Linting
-
-This boilerplate project includes React ESLint configuration.
-
-```
-npm run lint
-```
-
-### Dependencies
+### Dependencias
 
 * React
 * Webpack
+* Node >= 4
+* npm ou yarn
 * [babel-loader](https://github.com/babel/babel-loader)
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
