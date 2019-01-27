@@ -131,7 +131,6 @@
     @include hacks();
     position: relative;
     background: $color;
-    cursor: pointer;
     overflow: hidden;
   	&:before {
 	  	content: "";
