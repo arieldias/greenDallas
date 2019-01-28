@@ -58,7 +58,7 @@ class Chart extends Component {
  
   render(){ 
     return(
-      <div className="charWrapper">
+      <div className="char__wrapper">
         <div className="headerBlock"> 
             <i className="fas fa-project-diagram"></i>
             <h2 className="h2"> Site Traffic Overview </h2>
