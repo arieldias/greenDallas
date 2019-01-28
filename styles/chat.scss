@@ -25,7 +25,6 @@
         }
         
         &__noPortrait {
-          margin: 0 15px;
           // since this is a background, it should ignore the padding around it
           padding: ($imageChatSize / 2); 
           max-width: 100%;
